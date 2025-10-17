@@ -21,7 +21,7 @@ export const LocaleProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       setIsLoading(true);
       try {
         // Use fetch to load the JSON file from the public directory
-        const response = await fetch(`/locales/${locale}.json`);
+        const response = await fetch(`./locales/${locale}.json`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
